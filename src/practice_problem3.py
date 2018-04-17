@@ -164,6 +164,8 @@ def practice_problem3a(circles):
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
     product = 1
+    if circles == []:
+        return 1
     for k in range(len(circles)):
         product = product*circles[k].center.x
     return product
@@ -269,7 +271,7 @@ def practice_problem3b(sequence):
       :type: sequence: list    or tuple or string
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # IMPLEMENTATION REQUIREMENT:  You are NOT allowed to use the
@@ -281,6 +283,11 @@ def practice_problem3b(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ####################################################################
+
+    for k in range(len(sequence) - 1):
+        if sequence[len(sequence) - 1] == sequence[k]:
+            return True
+    return False
 
 
 def run_test_practice_problem3c():

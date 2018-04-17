@@ -197,7 +197,7 @@ def practice_problem2b(sequence):
       :type sequence [str]
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -206,8 +206,12 @@ def practice_problem2b(sequence):
     ####################################################################
     first_letters = ''
     for k in range(len(sequence)):
-        first_letters = first_letters + sequence[k[0]]
+        s = sequence[k]
+        if len(s) > 0:
+            first_letters = first_letters + s[0]
     return first_letters
+
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
